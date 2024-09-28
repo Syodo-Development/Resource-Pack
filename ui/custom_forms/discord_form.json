@@ -1,0 +1,70 @@
+//@Aufgecodet Das ist meins! Finger weg xd
+{
+    "namespace": "discord_form",
+    "syodo_discord": {
+        "type": "stack_panel",
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
+        "size": ["70% - 30px", "80% - 20px"],
+        "offset": [0, 15],
+        "orientation": "vertical",
+        "controls": [
+            {
+                "title": {
+                    "type": "panel",
+                    "anchor_from": "center",
+                    "anchor_to": "center",
+                    "size": [ "100%", 31 ],
+                    "controls" :[
+                        {
+                           "close_button@custom_close.syodo_close_button":{}
+                        }
+                    ]
+                }
+            },
+            {
+                "padding": {
+                    "type": "panel",
+                    "size": ["100%c", 5],
+                    "anchor_from": "top_left",
+                    "anchor_to": "top_left"
+                }
+            },
+            {
+                "contents": {
+                    "size": ["100%", "100%"],
+                    "layer": 2,
+                    "type": "image",
+                    "texture": "textures/ui/background/discord",
+                    "keep_ratio": true,
+                    "controls": [
+                       
+						            {
+                "modal_description": {
+                    "type": "label",
+                    "font_type": "Mojangles",
+                    "localize": false,
+                    "text": "#form_text",
+                    "color": "white",
+                    "text_alignment": "center",
+                    "font_scale_factor": 1,
+                    "anchor_from": "top_left",
+                    "anchor_to": "top_left",
+                    "size": ["100%", "100%"],
+                    "offset": [0, "85%"],
+                    "layer": 53,
+                    "shadow": true,
+                    "bindings": [
+                        {
+                            "binding_name": "#form_text",
+                            "binding_type": "global"
+                        }
+                    ]
+                }
+            }
+                    ]
+                }
+            }
+        ]
+    }
+}

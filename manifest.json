@@ -1,0 +1,30 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "This pack contains our property",
+        "name": "§bSyodo §fResourcepack",
+        "uuid": "2c3de5e3-25a5-40e6-9374-19fcb86c0afc",
+        "version": [
+            1,
+            0,
+            6
+        ],
+        "min_engine_version": [
+            1,
+            16,
+            2
+        ]
+    },
+    "modules": [
+        {
+            "description": "§bSyodo §fResourcepack",
+            "type": "resources",
+            "uuid": "2e59db72-ca19-4242-85b1-30090c9ab2bc",
+            "version": [
+                1,
+                0,
+                6
+            ]
+        }
+    ]
+}

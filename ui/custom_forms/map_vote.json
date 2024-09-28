@@ -1,0 +1,305 @@
+{
+    "namespace": "map_vote",
+    "syodo_map_vote": {
+        "type": "stack_panel",
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
+        "size": ["80% - 30px", "80% - 20px"],
+        "offset": [0, 15],
+        "orientation": "vertical",
+        "controls": [
+            {
+                "title": {
+                    "type": "panel",
+                    "anchor_from": "center",
+                    "anchor_to": "center",
+                    "size": [ "100%", 31 ],
+                    "controls" :[
+                        {
+                            "modal_title" :{
+                                "type": "label",
+                                "font_type": "MinecraftTen",
+                                "localize": false,
+                                "text": "#title_text",
+                                "color": "black",
+                                "text_alignment": "center",
+                                "font_scale_factor": 2,
+                                "anchor_from": "center",
+                                "anchor_to": "center",
+                                "size": ["default", 30],
+                                "offset": [ 0, 0 ],
+                                "layer": 53,
+                                "shadow": false,
+                                "bindings": [
+                                    {
+                                        "binding_name": "#title_text",
+                                        "binding_type": "global"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                           "close_button@custom_close.syodo_close_button":{}
+                        },
+						{
+							"title_background@map_vote.title_background":{}
+						}
+                    ]
+                }
+            },
+            {
+                "padding": {
+                    "type": "panel",
+                    "size": ["100%c", 5],
+                    "anchor_from": "top_left",
+                    "anchor_to": "top_left"
+                }
+            },
+            {
+                "contents": {
+                    "size": ["100%", "100%"],
+                    "layer": 2,
+                    "type": "image",
+                    "texture": "textures/ui/background/mapvoting",
+                    "keep_ratio": false,
+                    "controls": [
+                        {
+                            "syodo_map_vote_scroll_panel@map_vote.syodo_map_vote_scroll_panel": {}
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "syodo_map_vote_scroll_panel@common.scroll_view_control": {
+        "anchor_to": "top_left",
+        "anchor_from": "top_left",
+        "$show_background": false,
+        "size": ["90%", "90%"],
+		"anchor_from": "center",
+        "anchor_to": "center",
+        "$scrolling_content": "map_vote.syodo_map_vote_grid_wrapper",
+        "$scroll_size": [10, "100% - 40px"],
+        "$scrolling_pane_size": ["100%", "100%-7px"],
+        "$scrolling_pane_offset": [0, 0],
+        "$scroll_bar_right_padding_size": [2, 0]
+    },
+    "syodo_map_vote_grid_wrapper": {
+        "type": "panel",
+        "anchor_from": "top_right",
+        "anchor_to": "top_right",
+        "offset": [5, 0],
+        "size" :["100% - 5px", "100%"],
+        "controls": [
+            {
+                "modal_description": {
+                    "type": "label",
+                    "font_type": "Mojangles",
+                    "localize": false,
+                    "text": "#form_text",
+                    "color": "white",
+                    "text_alignment": "center",
+                    "font_scale_factor": 1,
+                    "anchor_from": "top_middle",
+                    "anchor_to": "top_middle",
+                    "size": ["default", 20],
+                    "offset": [0, 5],
+                    "layer": 53,
+                    "shadow": true,
+                    "bindings": [
+                        {
+                            "binding_name": "#form_text",
+                            "binding_type": "global"
+                        }
+                    ]
+                }
+            },
+            {
+                "syodo_map_vote_grid@map_vote.syodo_map_vote_grid": {
+                    "offset": [0, 15]
+                }
+            }
+        ]
+    },
+    "syodo_map_vote_grid": {
+        "type": "grid",
+        "size": ["100%", "100%"],
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
+        "grid_item_template": "map_vote.syodo_map_vote_entry",
+        "grid_rescaling_type": "horizontal",
+        "collection_name": "form_buttons",
+        "bindings": [
+            {
+                "binding_name": "#form_button_length",
+                "binding_name_override": "#maximum_grid_items"
+            }
+        ]
+    },
+    "syodo_map_vote_entry":{
+        "size": ["33%", "100% - 20px"],
+        "$background": "textures/ui/map_vote/lobby_button_background",
+        "type":"panel",
+        "controls":[
+            {
+                "button_please_work@common.button":{
+                "size":[
+                    "100%",
+                    "100%"
+                ],
+                "layer":1,
+                "$pressed_button_name": "button.form_button_click",
+                "controls":[
+                    {
+                        "default@map_vote.syodo_map_vote_entry_inside":{
+                            "$state":"default"
+                        }
+                    },
+                    {
+                        "hover@map_vote.syodo_map_vote_entry_inside":{
+                            "$state":"hover"
+                        }
+                    },
+                    {
+                        "pressed@map_vote.syodo_map_vote_entry_inside":{
+                            "$state":"pressed"
+                        }
+                    }
+                ],
+                "bindings":[
+                    {
+                        "binding_type":"collection_details",
+                        "binding_collection_name":"form_buttons"
+                    },
+                    {
+                        "binding_name":"#form_button_text",
+                        "binding_type":"collection",
+                        "binding_collection_name":"form_buttons"
+                    },
+                    {
+                        "binding_type":"view",
+                        "source_property_name":"(not ((#form_button_text = '') or (#form_button_text = 'loading')))",
+                        "target_property_name":"#visible"
+                    }
+                ]
+                }
+            }
+        ],
+        "bindings":[
+            {
+                "binding_name":"#form_button_text",
+                "binding_type":"collection",
+                "binding_collection_name":"form_buttons"
+            }
+        ]
+    },
+    "syodo_map_vote_entry_inside":{
+        "type":"stack_panel",
+        "anchor_from":"top_left",
+        "anchor_to":"top_left",
+        "offset":[
+            5,
+            5
+        ],
+        "size":[
+            "100% - 10px",
+            "100% - 20px"
+        ],
+        "orientation":"vertical",
+        "$color|default":"black",
+		"$texture|default":"textures/ui/background/mapvote_name",
+        "variables":[
+            {
+                "requires":"($state = 'hover')",
+                "$texture": "textures/ui/background/mapvote_name_hover"
+            }
+        ],
+        "controls":[
+            {
+                "entry_icon":{
+                "size":[
+                    "100%",
+                    "95%"
+                ],
+                "layer":10,
+                "type":"image",
+                "keep_ratio":true,
+                "bindings":[
+                    {
+                        "binding_name":"#form_button_texture",
+                        "binding_name_override":"#texture",
+                        "binding_type":"collection",
+                        "binding_collection_name":"form_buttons"
+                    },
+                    {
+                        "binding_name":"#form_button_texture_file_system",
+                        "binding_name_override":"#texture_file_system",
+                        "binding_type":"collection",
+                        "binding_collection_name":"form_buttons"
+                    },
+                    {
+                        "binding_type":"view",
+                        "source_property_name":"(not ((#texture = '') or (#texture = 'loading')))",
+                        "target_property_name":"#visible"
+                    }
+                ]
+                }
+            },
+            {
+                "entry_description":{
+                "size":[
+                    "100%",
+                    "100%c + 12px"
+                ],
+                "layer":2,
+                "type":"image",
+                "texture":"$texture",
+                "keep_ratio":false,
+                "controls":[
+                        {
+                            "entry_description_label":{
+                                "type":"label",
+                                "font_type":"default",
+                                "text":"#form_button_text",
+                                "line_padding":2,
+                                "color":"white",
+                                "font_scale_factor":1,
+                                "anchor_from":"top_middle",
+                                "anchor_to":"top_middle",
+								//"text_alignment": "center",
+                                "offset":[
+                                6,
+                                6
+                                ],
+                                "size":[
+                                "100% - 8px",
+                                "default"
+                                ],
+                                "layer":5,
+                                "shadow":true,
+                                "bindings":[
+                                    {
+                                        "binding_type":"collection",
+                                        "binding_collection_name":"form_buttons",
+                                        "binding_condition":"none",
+                                        "binding_name":"#form_button_text",
+                                        "binding_name_override":"#form_button_text"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+		"title_background": {
+		"type": "image",
+		"texture": "textures/ui/effect_background", 
+		"anchor_from": "top_middle",
+		"anchor_to": "top_middle",
+		"alpha": 0.7,
+		"color": "black",
+		"size": [ "100%sm + 5%sm", 31 ]
+	}
+}

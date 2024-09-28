@@ -1,0 +1,10 @@
+{
+  "$transition_time_push_size": 0.5,
+  "$transition_time_pop_size": 0.25,
+  "$transition_time_push": 0.4,
+  "$transition_time_pop": 0.4,
+  "$container_transition_time_push": 0.4,
+  "$container_transition_time_pop": 0.4,
+  "$loading_bar_transition": 3.0,
+  "$7_color_format": [ 0.667, 0.667, 0.667 ]
+}

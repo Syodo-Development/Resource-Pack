@@ -1,0 +1,66 @@
+{
+    "namespace":"slappershop_btn_close",
+    "slappershop_btn_close@common.close_button":{
+       "$default_button_alpha":1,
+       "anchor_from":"top_right",
+       "anchor_to":"top_right",
+       "offset":[-42, 4],
+       "layer":6,
+       "controls":[
+          {
+             "default":{
+                "layer":2,
+                "type":"panel",
+                "size":[
+                   "100%c",
+                   "100%c"
+                ],
+                "controls":[
+                   {
+                      "close@common.close_button_panel":{
+                         "$close_button_texture":"textures/ui/slappershop/btn_close",
+                         "size": ["35px", "35px"]
+                      }
+                   }
+                ]
+             }
+          },
+          {
+             "hover":{
+               "layer":2,
+               "type":"panel",
+               "size":[
+                  "100%c",
+                  "100%c"
+               ],
+                "controls":[
+                   {
+                      "close@common.close_button_panel":{
+                         "$close_button_texture":"textures/ui/slappershop/btn_close_interact",
+                         "size": ["35px", "35px"]
+                      }
+                   }
+                ]
+             }
+          },
+          {
+             "pressed":{
+               "layer":2,
+               "type":"panel",
+               "size":[
+                  "100%c",
+                  "100%c"
+               ],
+                "controls":[
+                   {
+                      "close@common.close_button_panel":{
+                         "$close_button_texture":"textures/ui/slappershop/btn_close_interact",
+                         "size": ["35px", "35px"]
+                      }
+                   }
+                ]
+             }
+          }
+       ]
+    }
+ }

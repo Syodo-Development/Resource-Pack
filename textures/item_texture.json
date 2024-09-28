@@ -1,0 +1,39 @@
+{
+  "resource_pack_name": "vanilla",
+  "texture_name": "atlas.items",
+  "texture_data": {
+  "settings": {
+     "textures": "textures/ui/automation_glyph_color"
+  },
+  "craft_result": {
+     "textures": "textures/ui/book_arrowright_pressed"
+  },
+  "chest_slothide": {
+     "textures": "textures/ui/book_arrowright_pressed"
+  },
+  "raw_tungsten": {
+     "textures": "textures/items/raw_tungsten"
+  },
+  "tungsten_ingot": {
+     "textures": "textures/items/tungsten_ingot"
+  },
+  "charcoal_dust": {
+     "textures": "textures/items/dust/charcoal_dust"
+  },
+  "coal_dust": {
+     "textures": "textures/items/dust/charcoal_dust"
+  },
+  "copper_dust": {
+     "textures": "textures/items/dust/copper_dust"
+  },
+  "gold_dust": {
+     "textures": "textures/items/dust/gold_dust"
+  },
+  "iron_dust": {
+     "textures": "textures/items/dust/iron_dust"
+  },
+  "tungsten_dust": {
+     "textures": "textures/items/dust/tungsten_dust"
+  }
+ }
+}

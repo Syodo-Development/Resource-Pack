@@ -1,0 +1,270 @@
+
+{
+    "namespace": "server_form",
+    "third_party_server_screen@common.base_screen":{
+        "$screen_content":"server_form.syodo_main_content",
+        "button_mappings":[
+           {
+              "from_button_id":"button.menu_cancel",
+              "to_button_id":"button.menu_exit",
+              "mapping_type":"global"
+           }
+        ]
+    },
+    "syodo_main_content": {
+        "type": "panel",
+        "size": ["100%", "100%"],
+        "controls": [
+            {
+                "server_form_factory": {
+                    "type": "factory",
+                    "control_ids": {
+                        "long_form": "@server_form.syodo_long_form_selection",
+                        "custom_form": "@server_form.custom_form"
+                    }
+                }
+            }
+        ]
+    },
+    "syodo_long_form_selection": {
+        "type": "panel",
+        "$text_game_form": "§n§a§v",
+		"$text_map_vote": "§m§a§p",
+        "$text_cosmetic_form": "§6Cosmetics",
+		"$text_shop": "§a§d§e",
+		"$text_social_form": "§s§o§c",
+		"$text_social_hub_form": "§s§o§h",
+		"$text_friend_form": "§f§r§i",
+		"$text_profile_form": "§eProfil",
+		"$text_store_form": "§s§t§o",
+		"$text_discord_form": "§adiscord",
+		"$text_info_form": "§i§n§f§o",
+		"$text_login": "§l§o§g",
+        "size": ["100%", "100%"],
+        "controls": [
+            {
+                "long_form@long_form": {
+					"size": ["50%", "70%"],
+                    "bindings": [
+                       {
+                          "binding_type": "global",
+                          "binding_condition": "none",
+                          "binding_name": "#title_text",
+                          "binding_name_override": "#title_text"
+                       },
+                       {
+                          "source_property_name": "((#title_text - $text_game_form - $text_cosmetic_form - $text_map_vote - $text_social_form - $text_social_hub_form - $text_friend_form - $text_profile_form - $text_shop - $text_store_form - $text_discord_form - $text_info_form - $text_login) = #title_text)",
+                          "binding_type": "view",
+                          "target_property_name": "#visible"
+                       }
+                    ]
+                }
+            },
+            {
+                "syodo_game@game.syodo_game": {
+                    "bindings": [
+                        {
+                            "binding_type": "global",
+                            "binding_condition": "none",
+                            "binding_name": "#title_text",
+                            "binding_name_override": "#title_text"
+                        },
+                        {
+                           "source_property_name": "((not ((#title_text - $text_game_form) = #title_text)) and ((#title_text - $text_cosmetic_form - $text_map_vote - $text_friend_form) = #title_text))",
+                           "binding_type": "view",
+                           "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            },
+			{
+                "syodo_cos@cosmetic2.syodo_cos": {
+                    "bindings": [
+                        {
+                            "binding_type": "global",
+                            "binding_condition": "none",
+                            "binding_name": "#title_text",
+                            "binding_name_override": "#title_text"
+                        },
+                        {
+                           "source_property_name": "((not ((#title_text - $text_cosmetic_form) = #title_text)) and ((#title_text - $text_game_form - $text_map_vote - $text_social_form) = #title_text))",
+                           "binding_type": "view",
+                           "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            },
+			{
+                "syodo_map_vote@map_vote.syodo_map_vote": {
+                    "bindings": [
+                        {
+                            "binding_type": "global",
+                            "binding_condition": "none",
+                            "binding_name": "#title_text",
+                            "binding_name_override": "#title_text"
+                        },
+                        {
+                           "source_property_name": "((not ((#title_text - $text_map_vote) = #title_text)) and ((#title_text - $text_game_form - $text_cosmetic_form - $text_social_form) = #title_text))",
+                           "binding_type": "view",
+                           "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            },
+			{
+                "syodo_social_menu@social_menu.syodo_social_menu": {
+                    "bindings": [
+                        {
+                            "binding_type": "global",
+                            "binding_condition": "none",
+                            "binding_name": "#title_text",
+                            "binding_name_override": "#title_text"
+                        },
+                        {
+                           "source_property_name": "((not ((#title_text - $text_social_form) = #title_text)) and ((#title_text - $text_game_form - $text_cosmetic_form - $text_map_vote) = #title_text))",
+                           "binding_type": "view",
+                           "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            },
+			{
+                "syodo_player_profile_menu@player_profile_menu.syodo_player_profile_menu": {
+                    "bindings": [
+                        {
+                            "binding_type": "global",
+                            "binding_condition": "none",
+                            "binding_name": "#title_text",
+                            "binding_name_override": "#title_text"
+                        },
+                        {
+                           "source_property_name": "((not ((#title_text - $text_profile_form) = #title_text)) and ((#title_text - $text_game_form - $text_cosmetic_form - $text_map_vote) = #title_text))",
+                           "binding_type": "view",
+                           "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            },
+			{
+                "syodo_friend_menu@friend_menu.syodo_friend_menu": {
+                    "bindings": [
+                        {
+                            "binding_type": "global",
+                            "binding_condition": "none",
+                            "binding_name": "#title_text",
+                            "binding_name_override": "#title_text"
+                        },
+                        {
+                           "source_property_name": "((not ((#title_text - $text_friend_form) = #title_text)))",
+                           "binding_type": "view",
+                           "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            },
+			 {
+                "shop_ui@shop_ui.syodo_shop_ui": {
+                    "bindings": [
+                        {
+                            "binding_type": "global",
+                            "binding_condition": "none",
+                            "binding_name": "#title_text",
+                            "binding_name_override": "#title_text"
+                        },
+                        {
+                           "source_property_name": "((not ((#title_text - $text_shop) = #title_text)))",
+                           "binding_type": "view",
+                           "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            },
+			{
+                "store_form@store_form.syodo_store": {
+                    "bindings": [
+                        {
+                            "binding_type": "global",
+                            "binding_condition": "none",
+                            "binding_name": "#title_text",
+                            "binding_name_override": "#title_text"
+                        },
+                        {
+                           "source_property_name": "((not ((#title_text - $text_store_form) = #title_text)))",
+                           "binding_type": "view",
+                           "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            },
+			{
+                "discord_form@discord_form.syodo_discord": {
+                    "bindings": [
+                        {
+                            "binding_type": "global",
+                            "binding_condition": "none",
+                            "binding_name": "#title_text",
+                            "binding_name_override": "#title_text"
+                        },
+                        {
+                           "source_property_name": "((not ((#title_text - $text_discord_form) = #title_text)))",
+                           "binding_type": "view",
+                           "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            },
+			{
+                "social_menu_hub@social_menu_hub.syodo_social_menu_hub": {
+                    "bindings": [
+                        {
+                            "binding_type": "global",
+                            "binding_condition": "none",
+                            "binding_name": "#title_text",
+                            "binding_name_override": "#title_text"
+                        },
+                        {
+                           "source_property_name": "((not ((#title_text - $text_social_hub_form) = #title_text)))",
+                           "binding_type": "view",
+                           "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            },
+			{
+                "login@login.syodo_login": {
+                    "bindings": [
+                        {
+                            "binding_type": "global",
+                            "binding_condition": "none",
+                            "binding_name": "#title_text",
+                            "binding_name_override": "#title_text"
+                        },
+                        {
+                           "source_property_name": "((not ((#title_text - $text_login) = #title_text)))",
+                           "binding_type": "view",
+                           "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            },
+			{
+                "info_form@info_form.syodo_info": {
+                    "bindings": [
+                        {
+                            "binding_type": "global",
+                            "binding_condition": "none",
+                            "binding_name": "#title_text",
+                            "binding_name_override": "#title_text"
+                        },
+                        {
+                           "source_property_name": "((not ((#title_text - $text_info_form) = #title_text)))",
+                           "binding_type": "view",
+                           "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            }
+
+        ]
+    }
+}

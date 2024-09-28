@@ -1,0 +1,77 @@
+{
+  "resource_pack_name": "vanilla",
+  "texture_name": "atlas.terrain",
+  "padding": 8,
+  "num_mip_levels": 4,
+  "texture_data": {
+    "auto_crafting_table_front": {
+      "textures": "textures/blocks/auto_crafting_table_front"
+    },
+	"auto_crafting_table_top": {
+      "textures": "textures/blocks/auto_crafting_table_top"
+    },
+	"basic_bottom": {
+      "textures": "textures/blocks/basic_bottom"
+    },
+	"break_front": {
+      "textures": "textures/blocks/break_front"
+    },
+	"basic_side": {
+      "textures": "textures/blocks/basic_side"
+    },
+	"basic_top": {
+      "textures": "textures/blocks/basic_top"
+    },
+	"miner_top": {
+      "textures": "textures/blocks/miner_top"
+    },
+	"lumber_top": {
+      "textures": "textures/blocks/lumber_top"
+    },
+	"farmer_top": {
+      "textures": "textures/blocks/farmer_top"
+    },
+	"compressor_front": {
+      "textures": "textures/blocks/compressor_front"
+    },
+	"tungsten_ore_stone": {
+      "textures": "textures/blocks/tungsten_ore_stone"
+    },
+	"tungsten_block": {
+      "textures": "textures/blocks/tungsten_block"
+    },
+	"raw_tungsten_block": {
+      "textures": "textures/blocks/raw_tungsten_block"
+    },
+	"obelisk": {
+      "textures": "textures/blocks/obelisk"
+    },
+	"collector_side": {
+      "textures": "textures/blocks/collector_side"
+    },
+	"collector_top": {
+      "textures": "textures/blocks/collector_top"
+    },
+	"storage_side": {
+      "textures": "textures/blocks/storage_side"
+    },
+	"storage_top": {
+      "textures": "textures/blocks/storage_top"
+    },
+	"copper_wire": {
+      "textures": "textures/blocks/copper_wire"
+    },
+	"macerator_top": {
+      "textures": "textures/blocks/macerator_top"
+    },
+	"macerator_front": {
+      "textures": "textures/blocks/macerator_front"
+    },
+	"valve": {
+      "textures": "textures/blocks/valve"
+    },
+	"pump": {
+      "textures": "textures/blocks/pump"
+    }
+  }
+}

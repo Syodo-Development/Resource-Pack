@@ -1,0 +1,84 @@
+{
+  "namespace": "chest",
+  "ender_chest_panel@chest.small_chest_panel": {},
+  "shulker_box_panel@chest.small_chest_panel": {},
+  "barrel_panel@chest.small_chest_panel": {},
+  "small_chest_screen@common.inventory_screen_common": {
+    "$close_on_player_hurt|default": true,
+    "close_on_player_hurt": "$close_on_player_hurt",
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "chest.small_chest_panel",
+        "$screen_bg_content": "common.screen_background"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "chest.small_chest_panel",
+        "$screen_bg_content": "common.screen_background"
+      }
+    ]
+  },
+  "large_chest_screen@common.inventory_screen_common": {
+    "$close_on_player_hurt|default": true,
+    "close_on_player_hurt": "$close_on_player_hurt",
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "chest.large_chest_panel",
+        "$screen_bg_content": "common.screen_background"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "chest.large_chest_panel",
+        "$screen_bg_content": "common.screen_background"
+      }
+    ]
+  },
+  "ender_chest_screen@common.inventory_screen_common": {
+    "$close_on_player_hurt|default": true,
+    "close_on_player_hurt": "$close_on_player_hurt",
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "chest.ender_chest_panel",
+        "$screen_bg_content": "common.screen_background"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "chest.ender_chest_panel",
+        "$screen_bg_content": "common.screen_background"
+      }
+    ]
+  },
+  "shulker_box_screen@chest.small_chest_screen": {
+    "$close_on_player_hurt": true,
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "chest.shulker_box_panel",
+        "$screen_bg_content": "common.screen_background"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "chest.shulker_box_panel",
+        "$screen_bg_content": "common.screen_background"
+      }
+    ]
+  },
+  "barrel_screen@chest.small_chest_screen": {
+    "$close_on_player_hurt": true,
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "chest.barrel_panel",
+        "$screen_bg_content": "common.screen_background"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "chest.barrel_panel",
+        "$screen_bg_content": "common.screen_background"
+      }
+    ]
+  }
+}

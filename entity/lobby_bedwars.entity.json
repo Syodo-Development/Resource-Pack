@@ -1,0 +1,18 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "syodo:lobby_bedwars",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/lobby_bedwars"
+			},
+			"geometry": {
+				"default": "geometry.lobby_bedwars"
+			},
+			"render_controllers": ["controller.render.default"]
+		}
+	}
+}

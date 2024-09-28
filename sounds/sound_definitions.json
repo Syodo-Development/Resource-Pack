@@ -1,0 +1,23 @@
+{
+  "format_version": "1.14.0",
+  "sound_definitions": {
+	"level_finished": {
+      "category": "music",
+      "sounds": [
+        "sounds/files/level_finished"
+      ]
+    },
+    "advanced": {
+      "category": "music",
+      "sounds": [
+        "sounds/files/challenge_complete"
+      ]
+    },
+    "joinme_notification": {
+      "category": "music",
+      "sounds": [
+        "sounds/files/joinme_notification"
+      ]
+    }
+  }
+}

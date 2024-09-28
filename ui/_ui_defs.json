@@ -1,0 +1,18 @@
+{
+    "ui_defs":[
+       "ui/custom_forms/game_form.json",
+	   "ui/custom_forms/map_vote.json",
+       "ui/custom_close.json",
+       "ui/custom_forms/cosmetic_form.json",
+       "ui/custom_forms/btn_close.json",
+	   "ui/custom_forms/shop_ui.json",
+	   "ui/custom_forms/social_menu.json",
+	   "ui/custom_forms/social_menu_hub.json",
+	   "ui/custom_forms/friend_list.json",
+	   "ui/custom_forms/store_form.json",
+	   "ui/custom_forms/discord_form.json",
+	   "ui/custom_forms/info_form.json",
+	   "ui/custom_forms/player_profile.json",
+	   "ui/custom_forms/login_form.json"
+    ]
+ }
