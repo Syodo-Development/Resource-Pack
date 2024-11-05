@@ -64,6 +64,9 @@
 	"macerator_top": {
       "textures": "textures/blocks/macerator_top"
     },
+	"butcher_top": {
+	  "textures": "textures/blocks/butcher_top"
+	},
 	"macerator_front": {
       "textures": "textures/blocks/macerator_front"
     },
