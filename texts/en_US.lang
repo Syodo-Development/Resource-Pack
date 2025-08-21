@@ -16,3 +16,4 @@ tile.syodo:base_pipe.name=Copper Pipe
 tile.syodo:valve_pipe.name=Valve
 tile.syodo:pump_pipe.name=Pump
 valve.allowedItems=Which Items should the valve let through?
+commands.syodo.lobby=Teleports you back to our lobby.
