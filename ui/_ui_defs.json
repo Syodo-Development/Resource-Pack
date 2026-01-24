@@ -13,6 +13,7 @@
 	   "ui/custom_forms/discord_form.json",
 	   "ui/custom_forms/info_form.json",
 	   "ui/custom_forms/player_profile.json",
-	   "ui/custom_forms/login_form.json"
+	   "ui/custom_forms/login_form.json",
+	   "ui/join_loadscreen.json"
     ]
  }

@@ -1,20 +1,11 @@
 {
 "namespace": "hud",
   "menu_the_rest_panel": {
-    "type": "panel",
+    "type": "stack_panel",
     "size": [ "50% + 10px", "100%" ],
     "focus_container": true,
     "use_last_focus": true,
     "focus_nagivation_mode_left": "contained",
-    "controls": [
-	      {
-        "pause_logo_panel@common_art.pause_logo_panel": {
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-		  "size": [ "200%", "200%c + 2px" ],
-          "tts_ignore_count": true
-        }
-      },
       { "menu_button_control@pause.menu_button_control": {} }
     ]
   },
