@@ -40,6 +40,7 @@
 		"$text_discord_form": "§adiscord",
 		"$text_info_form": "§i§n§f§o",
 		"$text_login": "§l§o§g",
+		"$text_chest": "§c§h§e",
         "size": ["100%", "100%"],
         "controls": [
             {
@@ -53,7 +54,7 @@
                           "binding_name_override": "#title_text"
                        },
                        {
-                          "source_property_name": "((#title_text - $text_game_form - $text_cosmetic_form - $text_map_vote - $text_social_form - $text_social_hub_form - $text_friend_form - $text_profile_form - $text_shop - $text_store_form - $text_discord_form - $text_info_form - $text_login) = #title_text)",
+                          "source_property_name": "((#title_text - $text_game_form - $text_cosmetic_form - $text_map_vote - $text_social_form - $text_social_hub_form - $text_friend_form - $text_profile_form - $text_shop - $text_store_form - $text_discord_form - $text_info_form - $text_login - $text_chest) = #title_text)",
                           "binding_type": "view",
                           "target_property_name": "#visible"
                        }
@@ -231,6 +232,23 @@
                 }
             },
 			{
+                "container@container.main_panel": {
+                    "bindings": [
+                        {
+                            "binding_type": "global",
+                            "binding_condition": "none",
+                            "binding_name": "#title_text",
+                            "binding_name_override": "#title_text"
+                        },
+                        {
+                           "source_property_name": "((not ((#title_text - $text_chest) = #title_text)))",
+                           "binding_type": "view",
+                           "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            },
+			{
                 "login@login.syodo_login": {
                     "bindings": [
                         {
@@ -264,7 +282,6 @@
                     ]
                 }
             }
-
         ]
     }
 }

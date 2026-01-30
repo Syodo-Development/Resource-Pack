@@ -1,13 +1,13 @@
 {
     "format_version": 2,
     "header": {
-        "description": "This pack contains our property",
+        "description": "The resources you need to play on syodo.",
         "name": "§bSyodo §fResourcepack",
         "uuid": "2c3de5e3-25a5-40e6-9374-19fcb86c0afc",
         "version": [
             1,
             0,
-            8
+            12
         ],
         "min_engine_version": [
             1,
@@ -23,7 +23,7 @@
             "version": [
                 1,
                 0,
-                8
+                12
             ]
         }
     ]

@@ -1,6 +1,16 @@
 {
   "namespace": "disconnect",
-
+  
+  "title_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "controls": [
+      { "disconnect_text@disconnect.disconnect_text": {} }
+    ]
+  },
+  
   "disconnect_screen_text": {
     "type": "label",
 	"font_type": "Minecraft",
