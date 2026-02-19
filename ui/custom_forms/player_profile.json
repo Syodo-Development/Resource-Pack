@@ -58,7 +58,7 @@
                     "layer": 2,
                     "type": "image",
                     "type": "image",
-                    "texture": "textures/ui/effect_background",
+                    "texture": "textures/ui/background/lobby_button_background",
                     "color": "black",
                     "keep_ratio": false,
                     "alpha": 0.7,
@@ -78,7 +78,7 @@
                     "font_scale_factor": 1,
                     "anchor_from": "top_left",
                     "anchor_to": "top_left",
-                    "size": ["50%", "100%"],
+                    "size": ["30%", "100%"],
                     "offset": [20, 15],
                     "layer": 53,
                     "shadow": true,
@@ -93,7 +93,7 @@
 			            {
               "player_renderer_panel": {
                 "type": "panel",
-                "size": [ "50%", "30%" ],
+                "size": [ "60%", "40%" ],
 				"anchor_from": "bottom_left",
                 "anchor_to": "bottom_left",
                 "offset": [ 0, "-40%" ],
@@ -106,7 +106,6 @@
                       "property_bag": {
                         "#look_at_cursor": true
                       },
-					  //Alle Rechte bei Damian Heck
 					  "use_selected_skin": false,
 					  "use_player_paperdoll": true,
 					  "use_skin_gui_scale": true,
@@ -160,7 +159,7 @@
     },
     "syodo_player_profile_menu_grid": {
         "type": "grid",
-        "size": ["30%", "100%c"],
+        "size": ["20%", "100%c"],
         "anchor_from": "top_right",
         "anchor_to": "top_right",
 		"grid_dimensions": [2,2],
@@ -176,7 +175,7 @@
         ]
     },
     "syodo_player_profile_menu_entry":{
-        "size": ["100%", 100],
+        "size": ["100%", "100%c"],
         "$background": "textures/ui/cos/lobby_button_background",
         "type":"panel",
         "controls":[
@@ -184,7 +183,7 @@
                 "button_please_work@common.button":{
                 "size":[
                     "100%",
-                    "100%"
+                    "100%c"
                 ],
                 "layer":1,
                 "$pressed_button_name": "button.form_button_click",
@@ -236,13 +235,10 @@
         "type":"stack_panel",
         "anchor_from":"top_left",
         "anchor_to":"top_left",
-        "offset":[
-            5,
-            5
-        ],
+ 
         "size":[
-            "100% - 10px",
-            "100% - 20px"
+            "100%",
+            "105%c"
         ],
         "orientation":"vertical",
         "$color|default":"black",
@@ -261,7 +257,7 @@
                 "entry_icon":{
                 "size":[
                     "100%",
-                    "fill"
+                    "95%x"
                 ],
                 "layer":10,
                 "type":"image",
@@ -291,7 +287,7 @@
                 "entry_description":{
                 "size":[
                     "100%",
-                    "100%c + 12px"
+                    "20%x"
                 ],
                 "layer":2,
                 "type":"image",

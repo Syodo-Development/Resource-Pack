@@ -113,6 +113,7 @@
     },
     "title": {
         "type": "label",
+		"font_scale_factor": 2,
         "anchor_from": "bottom_left",
         "anchor_to": "bottom_left",
         "color": "$title_text_color",
@@ -156,19 +157,27 @@
             {
                 "item@container.item": {}
             }
-        ]
+        ],
+		"bindings": [
+			{
+                "binding_name": "#null",
+                "binding_type": "view",
+                "source_property_name": "(not ((#form_button_text - 'hidden') = #form_button_text))",
+                "target_property_name": "#visible"
+			}
+		]
     },
 
     "slot": {
         "type": "image",
         "layer": 2,
-        "size": ["100%", "100%x"],
+        "size": ["99%", "100%x"],
         "texture": "textures/ui/cell_image"
     },
 
     "item_amount": {
         "type": "panel",
-		"size": ["100%", "100%x"],
+		"size": ["99%", "100%x"],
         "controls": [
             {
                 "amount": {
@@ -218,7 +227,7 @@
     },
 
     "item@common.button": {
-		"size": ["100%", "100%x"],
+		"size": ["99%", "100%x"],
         "$aux_id": [
             {
                 "binding_name": "#form_button_texture",

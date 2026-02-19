@@ -35,7 +35,7 @@
 		"$text_social_form": "§s§o§c",
 		"$text_social_hub_form": "§s§o§h",
 		"$text_friend_form": "§f§r§i",
-		"$text_profile_form": "§eProfil",
+		"$text_profile_form": "§p§r§o§f",
 		"$text_store_form": "§s§t§o",
 		"$text_discord_form": "§adiscord",
 		"$text_info_form": "§i§n§f§o",
@@ -245,8 +245,12 @@
                            "binding_type": "view",
                            "target_property_name": "#visible"
                         }
-                    ]
-                }
+                    ],
+					"anims": [
+						"@server_form.screen_entrance_animation_immediate_push",
+                        "@server_form.screen_entrance_animation_immediate_pop"
+					]					
+				}
             },
 			{
                 "login@login.syodo_login": {
@@ -283,5 +287,48 @@
                 }
             }
         ]
+    },
+	"screen_exit_animation_immediate_push": {
+        "anim_type": "alpha",
+        "easing": "linear",
+        //"duration": "$transition_time_push",
+        "duration": 0.0005,
+        "from": 1.0,
+        "to": 0.0,
+        "play_event": "screen.exit_push",
+        "end_event": "screen.exit_end"
+    },
+
+    "screen_exit_animation_immediate_pop": {
+        "anim_type": "alpha",
+        "easing": "linear",
+        //"duration": "$transition_time_pop",
+        "duration": 0.0005,
+        "from": 1.0,
+        "to": 0.0,
+        "play_event": "screen.exit_pop",
+        "end_event": "screen.exit_end"
+    },
+
+    "screen_entrance_animation_immediate_push": {
+        "anim_type": "alpha",
+        "easing": "linear",
+        //"duration": "$transition_time_push",
+        "duration": 0.5,
+        "from": 0.0,
+        "to": 1.0,
+        "play_event": "screen.entrance_push",
+        "end_event": "screen.entrance_end"
+    },
+
+    "screen_entrance_animation_immediate_pop": {
+        "anim_type": "alpha",
+        "easing": "linear",
+        //"duration": "$transition_time_pop",
+        "duration": 0.25,
+        "from": 0.0,
+        "to": 1.0,
+        "play_event": "screen.entrance_pop",
+        "end_event": "screen.entrance_end"
     }
 }
